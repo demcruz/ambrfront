@@ -16,7 +16,8 @@ const LoginForm = () => {
     e.preventDefault();
     console.log('🔑 Login attempt:', { username, password });
     try {
-      const res = await axios.post('http://localhost:8080/auth/login', { username, password });
+      // const res = await axios.post('http://localhost:8080/auth/login', { username, password });
+      const res = await axios.post('http://54.232.73.10:8080/auth/login', { username, password });
       console.log('✅ Login response:', res.data);
       localStorage.setItem('jwtToken', res.data.token);
       setError('');
