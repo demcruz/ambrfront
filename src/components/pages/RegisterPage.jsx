@@ -18,7 +18,7 @@ const RegisterPage = () => {
     console.log('🆕 Register attempt:', { username, password });
     try {
       //await axios.post('http://localhost:8080/auth/register', { username, password });
-      await axios.post('http://54.232.73.10:8080/auth/login', { username, password });
+      await axios.post('http://54.232.73.10:8080/auth/register', { username, password });
       console.log('✅ Register successful for:', username);
       setMessage('Registro bem-sucedido! Redirecionando...');
       setTimeout(() => navigate('/login'), 1500);
