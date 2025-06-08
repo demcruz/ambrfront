@@ -1,0 +1,44 @@
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;             /* zera margem em cima/baixo */
+}
+
+
+
+
+
+.input-icon-wrapper {
+  display: flex;
+  align-items: center;
+  background: #f4f4f8;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.input-icon {
+  color: #888;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.input-icon-wrapper {
+  margin: 0 0 1rem;      /* 1rem apenas embaixo */
+}
+
+.atom-button {
+  margin: 1rem 0 0;      /* 1rem acima, zero embaixo */
+}
+
+
+.input-icon-wrapper .atom-input {
+  border: none;                /* removemos borda duplicada */
+  background: transparent;
+  padding: 0.5rem 0;
+  flex: 1;                      /* ocupa o restante do espaço */
+}
+
+
