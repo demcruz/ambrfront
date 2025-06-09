@@ -1,0 +1,49 @@
+.campo-label-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-grow: 1;
+  /* Largura mínima para o componente, ajustado para ser mais flexível */
+  min-width: 260px; /* Reduzido levemente */
+}
+
+.campo-label-input input {
+  margin-left: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  font-size: 1rem;
+  background: #f9f9e7;
+  flex-grow: 1;
+  max-width: 100%;
+  box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
+}
+
+.campo-label-input label {
+  min-width: 140px; /* Ajustado para um alinhamento consistente, levemente menor */
+  margin-right: 10px;
+  font-weight: bold;
+  color: #444;
+  text-align: right;
+  padding-right: 5px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 640px) {
+  .campo-label-input {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    min-width: unset;
+  }
+  .campo-label-input label {
+    min-width: unset;
+    margin-right: 0;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  .campo-label-input input {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,289 @@
+body {
+  overflow-x: hidden; /* Garante que não haja rolagem horizontal no body */
+}
+
+.ocorrencias-container {
+  background: #fff9e3;
+  padding: 2.5rem;
+  border-radius: 16px;
+  max-width: 1200px; /* Aumentado para ocupar mais a largura da tela */
+  margin: 2rem auto;
+  box-shadow: 0 3px 18px rgba(230,180,65,0.09);
+  border: 1px solid #f5e9c5;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Importante para evitar overflow de padding */
+}
+
+.ocorrencias-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ocorrencias-header-subtitle {
+  color: #db7e00;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.ocorrencias-header-title {
+  color: #d16b00;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ocorrencias-form-title {
+  margin: 1rem 0 2rem 0;
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-align: center;
+  color: #a05a00;
+  border-bottom: 1px solid #f0e0b0;
+  padding-bottom: 1rem;
+}
+
+.ocorrencias-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.form-row, .form-row-ro-revisao {
+  display: flex;
+  flex-wrap: wrap;
+  /* Reduzido o gap para permitir mais campos por linha */
+  gap: 1.5rem 2rem; /* Espaçamento vertical e horizontal diferentes */
+  align-items: flex-start;
+  margin-bottom: 18px;
+  justify-content: flex-start;
+}
+
+/* Ajuste específico para a linha RO, Verificar, Revisão */
+.form-row-ro-revisao {
+  align-items: center;
+  /* Largura mínima para o primeiro CampoLabelInput na linha RO */
+  min-width: 280px; /* Mantém este min-width para o primeiro campo */
+}
+.form-row-ro-revisao .verificar-btn {
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+/* Ajuste específico para linhas com apenas um campo (como Abrangência) */
+.single-field-row {
+  justify-content: flex-start;
+  gap: 0;
+}
+.single-field-row .campo-label-input {
+  width: 100%;
+  /* Max-width ajustado para ocupar bem o espaço */
+  max-width: 800px;
+}
+
+.verificar-btn {
+  background: #f3d06f;
+  color: #1b1b1b;
+  border-radius: 7px;
+  padding: 10px 18px;
+  border: 1px solid #e4bd5a;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 1rem;
+  box-sizing: border-box; /* Adicionado */
+}
+
+.verificar-btn:hover {
+  background: #ffe38a;
+  border: 1px solid #ffc74d;
+}
+
+.checkbox-row {
+  margin-top: 1.5rem;
+  gap: 3.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  accent-color: #f3d06f;
+}
+
+
+.botoes-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.btn {
+  border-radius: 7px;
+  padding: 12px 25px;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+  flex-grow: 1;
+  min-width: 140px;
+  max-width: 200px;
+  font-size: 1.05rem;
+  box-sizing: border-box; /* Adicionado */
+}
+
+.primary-btn {
+  background: #f3d06f;
+  color: #1b1b1b;
+  border: 1px solid #e4bd5a;
+}
+
+.primary-btn:hover {
+  background: #ffe38a;
+  border: 1px solid #ffc74d;
+}
+
+.secondary-btn {
+  background: #ccc;
+  color: #333;
+  border: 1px solid #bbb;
+}
+
+.secondary-btn:hover {
+  background: #b0b0b0;
+  border: 1px solid #a0a0a0;
+}
+
+
+/* --- Media Queries para Responsividade --- */
+
+/* Remove a largura fixa para evitar overflow em telas grandes, usando um % */
+@media (min-width: 1201px) { /* Para telas maiores que 1200px */
+  .ocorrencias-container {
+    max-width: 90%; /* Ocupa 90% da largura da tela */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1200px) { /* Para telas até 1200px */
+  .ocorrencias-container {
+    max-width: 95%; /* Ocupa 95% da largura da tela */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .ocorrencias-container {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+  .form-row, .form-row-ro-revisao {
+    gap: 1rem; /* Reduzido o gap para telas menores */
+  }
+  .ocorrencias-header-title {
+    font-size: 2rem;
+  }
+  .ocorrencias-form-title {
+    font-size: 1.5rem;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ocorrencias-container {
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+  }
+  .ocorrencias-header-title {
+    font-size: 1.6rem;
+  }
+  .ocorrencias-form-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  .form-row, .form-row-ro-revisao {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .campo-label-input,
+  .campo-label-select {
+    width: 100%;
+    margin-bottom: 15px;
+    min-width: unset;
+  }
+  .campo-label-input label,
+  .campo-label-select label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    min-width: unset;
+  }
+  .campo-label-input input,
+  .campo-label-select select {
+    width: 100%;
+    margin-left: 0;
+    max-width: unset;
+    font-size: 1rem;
+  }
+  .verificar-btn {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .single-field-row .campo-label-input {
+    max-width: unset;
+  }
+  .checkbox-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .checkbox-label {
+    font-size: 1rem;
+  }
+  .botoes-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .btn {
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ocorrencias-container {
+    padding: 0.8rem;
+  }
+  .ocorrencias-header-title {
+    font-size: 1.3rem;
+  }
+  .ocorrencias-form-title {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
