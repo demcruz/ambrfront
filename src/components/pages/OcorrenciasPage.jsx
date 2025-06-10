@@ -26,7 +26,7 @@ const OcorrenciasPage = () => {
 
         {/* Linha 1: RO, Verificar, Revisão */}
         <div className="form-row">
-          <CampoLabelInput label="RO:" name="ro" width={100} />
+          <CampoLabelInput label="Informe o número do RO:" name="ro" width={40} />
           <button type="button" className="verificar-btn">Verificar</button>
           <CampoLabelInput label="Revisão:" name="revisao" width={60} />
         </div>
@@ -34,27 +34,37 @@ const OcorrenciasPage = () => {
         {/* Linha 2: Ocorrência, P/R, Causa */}
         <div className="form-row">
           <CampoLabelSelect label="Ocorrência:" name="ocorrencia" options={ocorrencias} />
-          <CampoLabelSelect label="P/R:" name="pr" options={prOptions} />
+        </div>
+        <div className="form-row">
           <CampoLabelSelect label="Causa:" name="causa" options={causas} />
         </div>
 
         {/* Linha 3: Setor, Local, Data Ocorr. */}
         <div className="form-row">
           <CampoLabelSelect label="Setor:" name="setor" options={setores} />
+          <CampoLabelSelect label="P/R:" name="pr" options={prOptions} />
+        </div>
+
+        <div className="form-row">
           <CampoLabelSelect label="Local:" name="local" options={locais} />
-          <CampoLabelInput label="Data Ocorr.:" type="date" name="dataOcorrencia" width={130} />
+          <CampoLabelInput label="Data Ocorrencia" type="date" name="dataOcorrencia" width={20} />
         </div>
-
+ 
         {/* Linha 4: Hora, Equipamento, Detalhe */}
-        <div className="form-row">
-          <CampoLabelInput label="Hora:" type="time" name="horaOcorrencia" width={100} />
+        <div className="form-row">         
           <CampoLabelInput label="Equipamento:" name="equipamento" width={180} />
-          <CampoLabelInput label="Detalhe:" name="detalhe" width={300} />
+          <CampoLabelInput label="Hora:" type="time" name="horaOcorrencia" width={100} />       
         </div>
+                <div className="form-row">         
 
+        <CampoLabelInput label="Detalhe:" name="detalhe" width={300} />
+        </div>
+                <div className="form-row">         
+
+         <CampoLabelInput label="Duração (H):" type="number" name="duracao" width={90} />
+         </div>
         {/* Linha 5: Duração, Regime, Dia Semana */}
-        <div className="form-row">
-          <CampoLabelInput label="Duração (H):" type="number" name="duracao" width={90} />
+        <div className="form-row">         
           <CampoLabelSelect label="Regime:" name="regime" options={regimes} />
           <CampoLabelInput label="Dia Semana:" name="diaSemana" width={110} />
         </div>
@@ -65,16 +75,15 @@ const OcorrenciasPage = () => {
           <CampoLabelInput label="Data Emissão:" type="date" name="dataEmissao" width={130} />
         </div>
 
-        {/* Linha 7: Abrangência (única linha) */}
-        <div className="form-row single-field-row">
-          <CampoLabelInput label="Abrangência (Setores/Pessoas):" name="abrangencia" width={350} />
-        </div>
+       Abrangência da Ocorrência (Setores/Pessoas Envolvidas)
+       
 
         {/* Linha 8: Checkboxes (única linha) */}
         <div className="form-row checkbox-row single-field-row">
-          <label className="checkbox-label">
-            <input type="checkbox" /> Na Ocorrência
-          </label>
+        
+           Na Ocorrência           <button type="button" className="verificar-btn">Editar Lista</button>
+
+       
           <label className="checkbox-label">
             <input type="checkbox" /> Na Análise
           </label>

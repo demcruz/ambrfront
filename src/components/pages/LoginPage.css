@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;                /* ocupa toda altura */
-  background: linear-gradient(135deg, #6c63ff 0%, #8b84ff 100%);
+  background: linear-gradient(135deg, #eaef66 0%, #fad82e 100%);
 }
 
 .login-card {
@@ -28,7 +28,7 @@
   color: #555;
 }
 .page-link a {
-  color: #ecf867;
+  color: #171716;
   text-decoration: none;
   font-weight: bold;
 }
